@@ -1,0 +1,93 @@
+/* container */
+.list-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+  
+  /* title */
+  .list-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* grid */
+  .list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  /* card (pro každý class item) */
+  .list-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  /* hover efekt */
+  .list-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+  
+  /* text uvnitř */
+  .list-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* back link */
+  .back-link {
+    margin-top: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .back-link:hover {
+    opacity: 1;
+  }
+  /* inner content card */
+.clink-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* name */
+  .clink-name {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  /* button link */
+  .clink-button {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.2);
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.2s;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+  }
+  
+  /* hover */
+  .clink-button:hover {
+    background: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }

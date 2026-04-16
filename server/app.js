@@ -6,7 +6,7 @@ var logger = require('morgan');
 const cors = require("cors");
 const mongoose = require('mongoose');
 mongoose
-.connect('')
+.connect('mongodb+srv://admin:admin@cluster0.nzkkh.mongodb.net/?appName=Cluster0')
 .then(() => console.log("Database connected"))
 .catch((err) => console.log(err));
 
@@ -14,6 +14,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var catsRouter = require('./routes/cats');
 var dogsRouter = require('./routes/dogs');
+var dogsRouter = require('./routes/dogs');
+var teachersRouter = require('./routes/teachers');
+var studentsRouter = require('./routes/students');
+var classesRouter = require('./routes/classes');
+var subjectsRouter = require('./routes/subjects');
+
+
 
 var app = express();
 
@@ -33,6 +40,11 @@ app.use('/users', usersRouter);
 //http://localhost:3000/cats/
 app.use('/cats', catsRouter);
 app.use('/dogs', dogsRouter);
+app.use('/students', studentsRouter);
+app.use('/subjects', subjectsRouter);
+app.use('/teachers', teachersRouter);
+app.use('/classes', classesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
